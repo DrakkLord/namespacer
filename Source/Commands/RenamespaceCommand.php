@@ -225,7 +225,7 @@ class RenamespaceCommand extends Command {
 
 		`cd {$projectOutputPath} && composer update`;
 		`rm -rf {$projectOutputPath}vendor/bin`;
-		rename($projectOutputPath.'vendor', $outputPath.'lib');
+		rename($projectOutputPath.'vendor', $outputPath);
 		`rm -rf $tempPath`;
 
 		$output->writeln("");
